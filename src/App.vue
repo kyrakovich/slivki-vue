@@ -2,7 +2,8 @@
 import { ref } from 'vue'
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import CoffeComponent from './components/CoffeComponent.vue'
-
+import textC from './components/textC.vue'
+import xantcomp from './components/xantcomp.vue'
 // const nunsss = 167
 // const qwe = 300
 // const string = "123"
@@ -20,84 +21,45 @@ import CoffeComponent from './components/CoffeComponent.vue'
 //     result.value == nunsss + qwe
 // }
 
-const coffees = ref<Object[]>([
+const coffees = [
     {
         name:"Медовый раф",
-        desription:"Нежность мёда и сливок в объятиях экспрессо",
+        description:"Нежность мёда и сливок в объятиях экспрессо",
         price:"1080",
         image:"q"
         
     },
     {
         name:"Уютное кофе",
-        desription:"Идеальный баланс кофе и шелковой молочной пенки.",
+        description:"Идеальный баланс кофе и шелковой молочной пенки.",
         price:"1080",
         image:"w"
     },
     {
         name:"Плед и латте",
-        desription:"Тот самый латте, с которым так приятно укутаться в плед.",
+        description:"Тот самый латте, с которым так приятно укутаться в плед.",
         price:"1080",
         image:"e"
     },
     {
         name:"Сердце сливок",
-        desription:"Классический экспрессо с нежными сердечком из взбитых сливок.",
+        description:"Классический экспрессо с нежными сердечком из взбитых сливок.",
         price:"1000",
         image:"r"
     },
-    {
-        name:"Медовый раф",
-        desription:"Нежность мёда и сливок в объятиях экспрессо",
-        price:"1080",
-        image:"q"
-        
-    },
-    {
-        name:"Уютное кофе",
-        desription:"Идеальный баланс кофе и шелковой молочной пенки.",
-        price:"1080",
-        image:"w"
-    },
-    {
-        name:"Плед и латте",
-        desription:"Тот самый латте, с которым так приятно укутаться в плед.",
-        price:"1080",
-        image:"e"
-    },
-    {
-        name:"Сердце сливок",
-        desription:"Классический экспрессо с нежными сердечком из взбитых сливок.",
-        price:"1000",
-        image:"r"
-    },
-    {
-        name:"Медовый раф",
-        desription:"Нежность мёда и сливок в объятиях экспрессо",
-        price:"1080",
-        image:"q"
-        
-    },
-    {
-        name:"Уютное кофе",
-        desription:"Идеальный баланс кофе и шелковой молочной пенки.",
-        price:"1080",
-        image:"w"
-    },
-    {
-        name:"Плед и латте",
-        desription:"Тот самый латте, с которым так приятно укутаться в плед.",
-        price:"1080",
-        image:"e"
-    },
-    {
-        name:"Сердце сливок",
-        desription:"Классический экспрессо с нежными сердечком из взбитых сливок.",
-        price:"1000",
-        image:"r"
-    },
-]) 
+]
 
+const булочки = [
+    {
+        name:"qwe"
+    },
+    {
+        name:"rty"
+    },
+    {
+        name:"uiuo"
+    },
+]
 
 
 </script>
@@ -107,7 +69,6 @@ const coffees = ref<Object[]>([
 
 <template>
     <HeaderComponent />
-
     <v-container class="image-list">
         <v-container class="first-image">
             <v-container class="absolute-image"></v-container>
@@ -125,16 +86,15 @@ const coffees = ref<Object[]>([
     <h1>Меню</h1>
     <v-container class="Menu-conteiner">
         <v-row class="jjjj">
-            <CoffeComponent :items=coffees />
+            <CoffeComponent :name="cofee.name"
+            :description="cofee.description"
+            :image="cofee.image"
+            :price="cofee.price"
+            :key="cofee.name"
+            v-for="cofee in coffees"/>
         </v-row>
     </v-container>
-    <v-row class="justify-center text" style="text-align: center;">
-        <v-col cols="1">1</v-col>
-        <v-col cols="1">2</v-col>
-        <v-col cols="1">3</v-col>
-        <v-col cols="3">4</v-col>
-        <v-col cols="6">5</v-col>
-    </v-row>
+    <textC name="" />
 </template>
 
 

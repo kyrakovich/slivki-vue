@@ -1,13 +1,13 @@
 <template>
-    <v-col cols="3" v-for="i in props">
-        <v-container class="photo" :class="i.image">
+    <v-col cols="3">
+        <v-container class="photo" :class="props.image">
 
         </v-container>
         <v-col>
-            <h1>{{ i.name }}</h1>
+            <h1>{{ props.name }}</h1>
             <v-row>
-                <p>{{ i.desription }}</p>
-                <p>{{ i.price }}</p>
+                <p>{{ props.description }}</p>
+                <p>{{ props.price }}</p>
             </v-row>
         </v-col>
     </v-col>
@@ -19,7 +19,7 @@
 const props = defineProps({
         name: {
             type: String,
-            default: "Кофе"
+            default: "Kофе"
         },
         description: {
             type: String,
