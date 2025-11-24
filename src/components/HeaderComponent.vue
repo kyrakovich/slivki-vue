@@ -1,8 +1,8 @@
 <template>
     <v-container class="header">
         <v-container class="info">
-            <p>меню</p>
-            <p>о нас</p>
+            <p class="cursor" @click="GoToMenuPage">меню</p>
+            <p class="cursor" @click="GoToAboutUsPage">о нас</p>
         </v-container>
         <v-container>
             <h1 class="header-title">Сливки</h1>
@@ -18,9 +18,24 @@
     </v-container>
 </template>
 
+<script setup lang="ts">
+import router from '@/router';
+
+
+function GoToMenuPage(){
+    router.push('/menu')
+}
+
+function GoToAboutUsPage(){
+    router.push('/AboutUs')
+}
+
+</script>
+
 <style scoped>
 .header-title {
     font-family: lobelia;
+    text-align: center;
 }
 
 .header {
@@ -47,5 +62,9 @@
     text-align: center;
     align-items: center;
 
+}
+
+.cursor{
+    cursor: pointer;
 }
 </style>
