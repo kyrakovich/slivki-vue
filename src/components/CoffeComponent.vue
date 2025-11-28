@@ -1,5 +1,5 @@
 <template>
-    <v-col cols="3">
+    <v-col cols="3" class="pb-10">
         <v-container class="photo" :class="props.image">
 
         </v-container>
@@ -10,6 +10,7 @@
                 <p>{{ props.price }}</p>
             </v-row>
         </v-col>
+        <v-divider thickness="thick" color="#DE8626" ></v-divider>
     </v-col>
 </template>
 

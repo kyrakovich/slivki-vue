@@ -5,7 +5,7 @@
             <p class="cursor" @click="GoToAboutUsPage">о нас</p>
         </v-container>
         <v-container>
-            <h1 class="header-title">Сливки</h1>
+            <h1 class="header-title cursor" @click="GoToHome">Сливки</h1>
         </v-container>
         <v-container class="infoo mr-10">
             <v-container class="icon">
@@ -30,12 +30,27 @@ function GoToAboutUsPage(){
     router.push('/AboutUs')
 }
 
+function GoToHome(){
+    router.push('/')
+}
+
 </script>
 
 <style scoped>
 .header-title {
     font-family: lobelia;
     text-align: center;
+}
+h1{
+    width: fit-content;
+    justify-self: center;
+}
+
+
+.wew{
+    justify-self: center;
+    justify-content: center;
+    justify-items: ;
 }
 
 .header {

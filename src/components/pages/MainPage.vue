@@ -1,13 +1,12 @@
 <template>
     <v-container class="image-list">
         <v-container class="first-image">
+            <p class="sl">СЛИВКИ</p>
+            <p class="sl without-obv">СЛИВКИ</p>
+            <p class="sl">СЛИВКИ</p>
+            <p class="sl without-obv">СЛИВКИ</p>
+            <p class="sl">СЛИВКИ</p>
             <v-container class="absolute-image"></v-container>
-            <p class="sl">СЛИВКИ</p>
-            <p class="sl without-obv">СЛИВКИ</p>
-            <p class="sl">СЛИВКИ</p>
-            <p class="sl without-obv">СЛИВКИ</p>
-            <p class="sl">СЛИВКИ</p>
-
         </v-container>
         <v-container class="second-image">
 
@@ -16,12 +15,8 @@
     <h1>Меню</h1>
     <v-container class="Menu-conteiner">
         <v-row class="jjjj">
-            <CoffeComponent :name="cofee.name"
-            :description="cofee.description"
-            :image="cofee.image"
-            :price="cofee.price"
-            :key="cofee.name"
-            v-for="cofee in coffees"/>
+            <CoffeComponent :name="cofee.name" :description="cofee.description" :image="cofee.image"
+                :price="cofee.price" :key="cofee.name" v-for="cofee in coffees" />
         </v-row>
     </v-container>
     <textC name="" />
@@ -32,29 +27,29 @@
 import CoffeComponent from '@/components/CoffeComponent.vue'
 const coffees = [
     {
-        name:"Медовый раф",
-        description:"Нежность мёда и сливок в объятиях экспрессо",
-        price:"1080",
-        image:"q"
-        
+        name: "Медовый раф",
+        description: "Нежность мёда и сливок в объятиях экспрессо",
+        price: "1080",
+        image: "q"
+
     },
     {
-        name:"Уютное кофе",
-        description:"Идеальный баланс кофе и шелковой молочной пенки.",
-        price:"1080",
-        image:"w"
+        name: "Уютное кофе",
+        description: "Идеальный баланс кофе и шелковой молочной пенки.",
+        price: "1080",
+        image: "w"
     },
     {
-        name:"Плед и латте",
-        description:"Тот самый латте, с которым так приятно укутаться в плед.",
-        price:"1080",
-        image:"e"
+        name: "Плед и латте",
+        description: "Тот самый латте, с которым так приятно укутаться в плед.",
+        price: "1080",
+        image: "e"
     },
     {
-        name:"Сердце сливок",
-        description:"Классический экспрессо с нежными сердечком из взбитых сливок.",
-        price:"1000",
-        image:"r"
+        name: "Сердце сливок",
+        description: "Классический экспрессо с нежными сердечком из взбитых сливок.",
+        price: "1000",
+        image: "r"
     },
 ]
 
@@ -79,6 +74,7 @@ const coffees = [
     border-radius: 20px;
     margin-right: 40px;
     margin: 30px;
+    max-height: 700px;
 }
 
 .second-image {
@@ -130,15 +126,15 @@ h1 {
 }
 
 .absolute-image {
-    position: absolute;
+    position: relative;
     max-height: 550px;
     max-width: 500px !important;
     /* background-color: #de8526; */
     aspect-ratio: 1/1;
     background-image: url(@/assets/image/кофе.png);
     background-size: 550px;
-    top: 180px;
-    left: 23vw;
+    top: -600px;
+    left: 0vw;
 }
 
 .icon-arrow {
