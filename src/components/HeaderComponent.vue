@@ -12,7 +12,7 @@
                 <img src="@/assets/image/user-circle-single--circle-geometric-human-person-single-user.png" alt="">
             </v-container>
             <v-container class="icon">
-                <img src="@/assets/image/location-pin-3--navigation-map-maps-pin-gps-location.png" alt="">
+                <img class="cursor" @click="GoToNavigation" src="@/assets/image/location-pin-3--navigation-map-maps-pin-gps-location.png" alt="">
             </v-container>
         </v-container>
     </v-container>
@@ -32,6 +32,10 @@ function GoToAboutUsPage(){
 
 function GoToHome(){
     router.push('/')
+}
+
+function GoToNavigation(){
+    router.push('/Navigation')
 }
 
 </script>
@@ -58,7 +62,7 @@ h1{
     justify-content: space-between;
     background-color: #FFF3DB;
     border-radius: 20px;
-    width: 1280px;
+    min-width: 1280px;
     padding: 0px 20px;
 }
 
